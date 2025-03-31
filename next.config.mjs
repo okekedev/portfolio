@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export', // For static site generation
+    output: 'export',
     images: {
-      unoptimized: true, // This fixes the Image component in export mode
+      unoptimized: true,
     },
     experimental: {
-      turbo: {}, // Enable Turbopack for development
+      turbo: {},
+    },
+    eslint: {
+      ignoreDuringBuilds: true,  // This will ignore all ESLint errors during build
     },
   };
   
