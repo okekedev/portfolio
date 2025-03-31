@@ -2,40 +2,17 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
-
-const FadeInText = ({ text, delay = 0 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  return <span className={`fade-in-text ${isVisible ? 'visible' : ''}`}>{text}</span>;
-};
 
 export default function Apps() {
-
-
   return (
     <main>
       {/* Hero Section */}
       <section className="hero fade-in">
-        <h1>
-          <FadeInText text="Innovation at Your Fingertips 🌟" />
-        </h1>
+        <h1>Innovation at Your Fingertips 🌟</h1>
         <p>
-          <FadeInText
-            text="Discover our suite of apps designed to empower businesses and individuals with secure, AI-driven solutions. 🚀"
-            delay={500}
-          />
+          Discover our suite of apps designed to empower businesses and individuals with secure, AI-driven solutions. 🚀
         </p>
       </section>
-
 
       {/* Apps Section */}
       <section className="projects-section fade-in">
@@ -53,11 +30,11 @@ export default function Apps() {
             />
             <h3>Medical Cares</h3>
             <p>
-              <FadeInText text="An app connecting Medicare beneficiaries with providers, featuring Power BI dashboards. 🩺" />
+              An app connecting Medicare beneficiaries with providers, featuring Power BI dashboards. 🩺
             </p>
             <p><strong>Tech Stack:</strong> Power BI, Microsoft Datamart, Swift</p>
             <p>
-              <FadeInText text="Impact: Improved provider visibility and accessibility for over 2 million records." />
+              Impact: Improved provider visibility and accessibility for over 2 million records.
             </p>
             <p>
               <a
@@ -80,11 +57,11 @@ export default function Apps() {
             />
             <h3>Scroll</h3>
             <p>
-              <FadeInText text="A Bible app curating inspiring verses using AI algorithms for daily reflection. 📖" />
+              A Bible app curating inspiring verses using AI algorithms for daily reflection. 📖
             </p>
             <p><strong>Tech Stack:</strong> Swift, AI Development</p>
             <p>
-              <FadeInText text="Impact: Provides users with personalized spiritual encouragement." />
+              Impact: Provides users with personalized spiritual encouragement.
             </p>
             <p>
               <a
@@ -110,11 +87,11 @@ export default function Apps() {
             />
             <h3>Sundai App</h3>
             <p>
-              <FadeInText text="Secure AI integration for document processing with enterprise-grade security. 🔒" />
+              Secure AI integration for document processing with enterprise-grade security. 🔒
             </p>
             <p><strong>Tech Stack:</strong> React, Python, Microsoft Azure</p>
             <p>
-              <FadeInText text="Impact: Ensures data privacy while enabling efficient document analysis." />
+              Impact: Ensures data privacy while enabling efficient document analysis.
             </p>
             <div className="embed-video">
               <iframe
@@ -138,11 +115,11 @@ export default function Apps() {
             />
             <h3>RoadVision</h3>
             <p>
-              <FadeInText text="An innovative app for road safety and navigation, powered by AI. 🛣️" />
+              An innovative app for road safety and navigation, powered by AI. 🛣️
             </p>
             <p><strong>Tech Stack:</strong> React, AI Development</p>
             <p>
-              <FadeInText text="Impact: Enhances road safety with AI-driven insights." />
+              Impact: Enhances road safety with AI-driven insights.
             </p>
             <div className="embed-video">
               <iframe
@@ -176,4 +153,3 @@ export default function Apps() {
     </main>
   );
 }
-

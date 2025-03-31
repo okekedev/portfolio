@@ -2,48 +2,20 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
-
-const TypewriterText = ({ text, delay = 0 }) => {
-  const [displayedText, setDisplayedText] = useState('');
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (index < text.length) {
-        setDisplayedText((prev) => prev + text[index]);
-        setIndex((prev) => prev + 1);
-      }
-    }, 50);
-
-    return () => clearTimeout(timer);
-  }, [index, text]);
-
-  return <span className="typewriter">{displayedText}</span>;
-};
 
 export default function Home() {
-
-
   return (
     <main>
       {/* Hero Section */}
       <section className="hero fade-in">
-        <h1>
-          <TypewriterText text="Sundai: Innovate with Confidence 🌟" />
-        </h1>
+        <h1>Sundai: Innovate with Confidence 🌟</h1>
         <p>
-          <TypewriterText
-            text="A leading business in secure AI solutions, founded by Christian Okeke, an IT Director with a passion for innovation. 🚀"
-            delay={2000}
-          />
+          A leading business in secure AI solutions, founded by Christian Okeke, an IT Director with a passion for innovation. 🚀
         </p>
         <Link href="/contact">
           <button className="cta-button">Get Started Today</button>
         </Link>
       </section>
-
-    
 
       {/* Overview Section */}
       <section className="about-section fade-in">
@@ -110,7 +82,7 @@ export default function Home() {
       <section className="about-section fade-in">
         <h2>Our Credentials 🏆</h2>
         <p>
-          Sundai’s team is backed by industry-leading certifications, ensuring top-tier expertise in every project. Our founder, Christian Okeke, holds certifications like Microsoft 365 Certified Endpoint Administrator Associate and CompTIA Security+.
+          Sundai's team is backed by industry-leading certifications, ensuring top-tier expertise in every project. Our founder, Christian Okeke, holds certifications like Microsoft 365 Certified Endpoint Administrator Associate and CompTIA Security+.
         </p>
         <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
           <Link href="/licenses">
