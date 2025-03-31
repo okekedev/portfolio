@@ -39,6 +39,25 @@ export default function Navbar() {
     };
   }, []);
 
+  // Add blur effect to background and handle click on blurred area
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('menu-open');
+      // Add event listener to close menu when clicking on blurred area
+      const handleOverlayClick = (e) => {
+        if (e.target.classList.contains('menu-overlay')) {
+          closeMenu();
+        }
+      };
+      document.addEventListener('click', handleOverlayClick);
+      return () => {
+        document.removeEventListener('click', handleOverlayClick);
+      };
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  }, [isMenuOpen]);
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <h1 className="logo">Sundai</h1>
@@ -46,14 +65,62 @@ export default function Navbar() {
         {isMenuOpen ? '✕' : '☰'}
       </button>
       <ul className={isMenuOpen ? 'active' : ''}>
-        <li><Link href="/about" onClick={closeMenu}>About</Link></li>
-        <li><Link href="/apps" onClick={closeMenu}>Apps</Link></li>
-        <li><Link href="/consulting-services" onClick={closeMenu}>Consulting Services</Link></li>
-        <li><Link href="/contact" onClick={closeMenu}>Contact</Link></li>
-        <li><Link href="/experience" onClick={closeMenu}>Experience</Link></li>
-        <li><Link href="/" onClick={closeMenu}>Home</Link></li>
-        <li><Link href="/licenses" onClick={closeMenu}>Licenses & Certifications</Link></li>
+        <li>
+          <Link
+            href="/"
+            onClick={closeMenu}
+            className={pathname === '/' ? 'active-link' : ''}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/about"
+            onClick={closeMenu}
+            className={pathname === '/about' ? 'active-link' : ''}
+          >
+            About
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/apps"
+            onClick={closeMenu}
+            className={pathname === '/apps' ? 'active-link' : ''}
+          >
+            Apps
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/consulting-services"
+            onClick={closeMenu}
+            className={pathname === '/consulting-services' ? 'active-link' : ''}
+          >
+            Consulting Services
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/contact"
+            onClick={closeMenu}
+            className={pathname === '/contact' ? 'active-link' : ''}
+          >
+            Contact
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/licenses"
+            onClick={closeMenu}
+            className={pathname === '/licenses' ? 'active-link' : ''}
+          >
+            Licenses & Certifications
+          </Link>
+        </li>
       </ul>
+      {isMenuOpen && <div className="menu-overlay"></div>}
     </nav>
   );
 }

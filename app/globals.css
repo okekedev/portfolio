@@ -10,6 +10,8 @@ body {
 }
 
 /* Navbar */
+/* Navbar */
+/* Navbar */
 .navbar {
   background-color: rgba(139, 111, 71, 0.95); /* Light taupe brown with slight transparency */
   padding: 0.5rem 1.5rem;
@@ -25,7 +27,7 @@ body {
 }
 
 .navbar.scrolled {
-  padding: 0.3rem 1.5rem; /* Further reduce padding when scrolled */
+  padding: 0.1rem 1.5rem; /* Further reduce padding when scrolled */
   background-color: rgba(139, 111, 71, 0.85); /* Slightly more transparent */
   backdrop-filter: blur(5px); /* Frosted glass effect like Apple */
   -webkit-backdrop-filter: blur(5px); /* For Safari compatibility */
@@ -42,14 +44,14 @@ body {
 }
 
 .navbar.scrolled .logo {
-  font-size: 1.5rem; /* Smaller logo when scrolled */
+  font-size: 1rem; /* Smaller logo when scrolled */
 }
 
 .navbar .logo:hover {
   transform: scale(1.05);
 }
 
-/* Hamburger Menu (Always Visible) */
+/* Hamburger Menu (Centered) */
 .hamburger {
   font-size: 1.5rem;
   color: #fff;
@@ -58,6 +60,9 @@ body {
   border: none;
   padding: 0;
   transition: font-size 0.3s ease;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar.scrolled .hamburger {
@@ -68,13 +73,15 @@ body {
   display: none; /* Hidden by default on all screen sizes */
   flex-direction: column;
   position: fixed;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 100vh;
+  top: 60px; /* Position below the navbar (adjust based on navbar height) */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw; /* 50% of viewport width on larger screens */
+  max-width: 400px; /* Maximum width to prevent it from getting too wide */
   background-color: rgba(139, 111, 71, 0.95);
-  padding: 3rem 1rem;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   z-index: 999;
 }
 
@@ -84,8 +91,9 @@ body {
 }
 
 .navbar li {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   text-align: center;
+  list-style: none; /* Remove dots (bullets) */
 }
 
 .navbar a {
@@ -95,12 +103,16 @@ body {
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s ease;
-  position: relative;
-  padding-bottom: 5px;
+  padding: 0.75rem 2rem; /* Equal padding on each side */
+  display: block; /* Ensure full width for equal padding */
 }
 
 .navbar a:hover {
   color: #D97706; /* Muted orange */
+}
+
+.navbar a.active-link {
+  color: #D97706; /* Muted orange for active page */
 }
 
 /* Underline animation on hover */
@@ -120,13 +132,43 @@ body {
   width: 50%;
 }
 
+/* Responsive menu size */
+@media (max-width: 768px) {
+  .navbar ul {
+    width: 80vw; /* 80% of viewport width on smaller screens */
+    max-width: 300px; /* Maximum width on smaller screens */
+  }
+
+  .navbar a {
+    font-size: 1.2rem; /* Slightly larger font size on mobile */
+    padding: 0.75rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Blur effect when menu is open */
+body.menu-open {
+  overflow: hidden; /* Prevent scrolling when menu is open */
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  backdrop-filter: blur(5px); /* Blur effect */
+  -webkit-backdrop-filter: blur(5px); /* For Safari compatibility */
+  z-index: 998; /* Below the menu but above the content */
+}
+
 @keyframes slideIn {
   from {
-    transform: translateX(100%);
+    transform: translate(-50%, -10px);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translate(-50%, 0);
     opacity: 1;
   }
 }
@@ -428,10 +470,20 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem;
+  gap: 3rem; /* Horizontal gap between elements */
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Grid for apps with App Store links (Medical Cares and Scroll) */
+.projects-grid-links {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Grid for apps with embedded videos (Sundai and RoadVision) */
+.projects-grid-videos {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin-top: 3rem; /* Vertical padding between grids, equal to horizontal gap */
 }
 
 .project-card {
@@ -441,6 +493,8 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   border: 2px solid #D97706;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -475,6 +529,43 @@ body {
 
 .project-card a:hover {
   text-decoration: underline;
+}
+
+/* Embedded Video Styling */
+.embed-video {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 504px; /* Match the iframe width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embed-video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 504 / 399; /* Maintain the iframe's aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .embed-video {
+    max-width: 100%;
+  }
+
+  .embed-video iframe {
+    aspect-ratio: 504 / 399;
+  }
+
+  .projects-grid-videos,
+  .projects-grid-links {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+
+  .projects-grid-videos {
+    margin-top: 2rem; /* Adjust vertical padding for smaller screens */
+  }
 }
 
 /* Retro Divider */
@@ -594,4 +685,32 @@ body {
 @keyframes typing {
   from { width: 100%; }
   to { width: 100%; }
+}
+
+/* Embedded Video Styling */
+.embed-video {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 504px; /* Match the iframe width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embed-video iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 504 / 399; /* Maintain the iframe's aspect ratio */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .embed-video {
+    max-width: 100%;
+  }
+
+  .embed-video iframe {
+    aspect-ratio: 504 / 399;
+  }
 }
