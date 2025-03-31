@@ -79,7 +79,6 @@ export default function Navbar() {
   const appsLinkClass = pathname === '/apps' ? 'active-link' : '';
   const consultingLinkClass = pathname === '/consulting-services' ? 'active-link' : '';
   const contactLinkClass = pathname === '/contact' ? 'active-link' : '';
-  const experienceLinkClass = pathname === '/experience' ? 'active-link' : '';
   const licensesLinkClass = pathname === '/licenses' ? 'active-link' : '';
   
   return (
@@ -112,11 +111,6 @@ export default function Navbar() {
         <li>
           <Link href="/contact" onClick={closeMenu} className={contactLinkClass}>
             Contact
-          </Link>
-        </li>
-        <li>
-          <Link href="/experience" onClick={closeMenu} className={experienceLinkClass}>
-            Experience
           </Link>
         </li>
         <li>
