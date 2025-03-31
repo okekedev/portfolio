@@ -13,7 +13,8 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const closeMenu = () => {
+  const closeMenu = (e) => {
+    e?.stopPropagation();
     setIsMenuOpen(false);
   };
 
@@ -42,19 +43,30 @@ export default function Navbar() {
   // Add blur effect to background and handle click on blurred area
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.classList.add('menu-open');
+      // Create the overlay element
+      const overlay = document.createElement('div');
+      overlay.className = 'menu-overlay';
+      document.body.appendChild(overlay);
+
       // Add event listener to close menu when clicking on blurred area
       const handleOverlayClick = (e) => {
         if (e.target.classList.contains('menu-overlay')) {
           closeMenu();
         }
       };
-      document.addEventListener('click', handleOverlayClick);
+      overlay.addEventListener('click', handleOverlayClick);
+
+      // Prevent scrolling when menu is open
+      document.body.style.overflow = 'hidden';
+
       return () => {
-        document.removeEventListener('click', handleOverlayClick);
+        // Clean up the overlay and event listener
+        overlay.removeEventListener('click', handleOverlayClick);
+        document.body.removeChild(overlay);
+        document.body.style.overflow = '';
       };
     } else {
-      document.body.classList.remove('menu-open');
+      document.body.style.overflow = '';
     }
   }, [isMenuOpen]);
 
@@ -112,6 +124,15 @@ export default function Navbar() {
         </li>
         <li>
           <Link
+            href="/experience"
+            onClick={closeMenu}
+            className={pathname === '/experience' ? 'active-link' : ''}
+          >
+            Experience
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/licenses"
             onClick={closeMenu}
             className={pathname === '/licenses' ? 'active-link' : ''}
@@ -120,7 +141,6 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
-      {isMenuOpen && <div className="menu-overlay"></div>}
     </nav>
   );
 }
