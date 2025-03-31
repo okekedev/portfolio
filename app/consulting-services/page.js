@@ -23,23 +23,6 @@ const TypewriterText = ({ text, delay = 0 }) => {
 };
 
 export default function ConsultingServices() {
-  // Add smooth scrolling for mouse wheel
-  useEffect(() => {
-    const handleWheel = (event) => {
-      event.preventDefault();
-      const scrollAmount = event.deltaY * 0.5; // Reduce scroll speed by 50%
-      window.scrollBy({
-        top: scrollAmount,
-        behavior: 'smooth', // Smooth scrolling for mouse wheel
-      });
-    };
-
-    window.addEventListener('wheel', handleWheel, { passive: false });
-
-    return () => {
-      window.removeEventListener('wheel', handleWheel);
-    };
-  }, []);
 
   return (
     <main>
