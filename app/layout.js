@@ -1,19 +1,32 @@
+import './globals.css';
+import { Playfair_Display, Roboto } from 'next/font/google';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import './globals.css';
+
+// Load Playfair Display from Google Fonts
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-playfair-display',
+});
+
+// Load Roboto as a fallback for Futura (since Futura is not on Google Fonts)
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-roboto',
+  display: 'swap',
+});
 
 export const metadata = {
-  title: 'Sundai - Secure Business Solutions',
-  description: 'Innovative, secure solutions for your business by Christian Okeke.',
+  title: 'Christian Okeke Portfolio',
+  description: 'Portfolio of Christian Okeke, showcasing projects and services by Sundai.',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
-      </head>
-      <body>
+      <body className={`${playfairDisplay.variable} ${roboto.variable}`}>
         <Navbar />
         {children}
         <Footer />

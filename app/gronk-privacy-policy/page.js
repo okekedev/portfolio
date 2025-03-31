@@ -50,12 +50,15 @@ export default function PrivacyPolicy() {
         </p>
       </section>
 
+      {/* Retro Divider */}
+      <div className="retro-divider"></div>
+
       {/* EULA Section */}
       <section className="about-section fade-in">
         <h2>End User License Agreement</h2>
         <h3>Important – Read Carefully Before Using This Application</h3>
         <p>
-          This End User License Agreement ("Agreement") is a legal agreement between you (either an individual or a single entity) and E&J Products LLC dba Sundai ("Licensor") for the software application named Gronk, including any associated media, printed materials, and electronic documentation (collectively, the "Application").
+          This End User License Agreement ({'"Agreement"'}) is a legal agreement between you (either an individual or a single entity) and E&J Products LLC dba Sundai ({'"Licensor"'}) for the software application named Gronk, including any associated media, printed materials, and electronic documentation (collectively, the {'"Application"'}).
         </p>
         <p>
           By installing, copying, or otherwise using the Application, you agree to be bound by the terms of this Agreement. If you do not agree to the terms of this Agreement, do not install or use the Application.
@@ -68,7 +71,7 @@ export default function PrivacyPolicy() {
 
         <h3>2. Subscription Services</h3>
         <p>
-          The Application may offer subscription-based services ("Subscription Services"). The following terms apply to such Subscription Services:
+          The Application may offer subscription-based services ({'"Subscription Services"'}). The following terms apply to such Subscription Services:
         </p>
         <h4>2.1. Subscription Period</h4>
         <p>
@@ -98,11 +101,11 @@ export default function PrivacyPolicy() {
         <h3>3. User Content</h3>
         <h4>3.1. Ownership</h4>
         <p>
-          You retain all rights to any content you create, upload, or store within the Application ("User Content").
+          You retain all rights to any content you create, upload, or store within the Application ({'"User Content"'}).
         </p>
         <h4>3.2. License to Licensor</h4>
         <p>
-          You grant Licensor a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and display your User Content solely for the purpose of providing and improving the Application's services to you.
+          You grant Licensor a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and display your User Content solely for the purpose of providing and improving the Application{'\''}s services to you.
         </p>
         <h4>3.3. Prohibited Content</h4>
         <p>
@@ -122,7 +125,7 @@ export default function PrivacyPolicy() {
         <h3>5. Intellectual Property Rights</h3>
         <h4>5.1.</h4>
         <p>
-          All title, ownership rights, and intellectual property rights in and to the Application and any copies thereof (including but not limited to any images, photographs, animations, video, audio, music, text, and "applets" incorporated into the Application) are owned by Licensor.
+          All title, ownership rights, and intellectual property rights in and to the Application and any copies thereof (including but not limited to any images, photographs, animations, video, audio, music, text, and {'"applets"'} incorporated into the Application) are owned by Licensor.
         </p>
         <h4>5.2.</h4>
         <p>
@@ -165,12 +168,12 @@ export default function PrivacyPolicy() {
 
         <h3>9. Disclaimer of Warranties</h3>
         <p>
-          THE APPLICATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. LICENSOR DOES NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE APPLICATION WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE APPLICATION WILL BE UNINTERRUPTED OR ERROR-FREE.
+          THE APPLICATION IS PROVIDED {'"AS IS"'} WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. LICENSOR DOES NOT WARRANT THAT THE FUNCTIONS CONTAINED IN THE APPLICATION WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE APPLICATION WILL BE UNINTERRUPTED OR ERROR-FREE.
         </p>
 
         <h3>10. Limitation of Liability</h3>
         <p>
-          IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OF OR INABILITY TO USE THE APPLICATION, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY CASE, LICENSOR'S ENTIRE LIABILITY UNDER ANY PROVISION OF THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT ACTUALLY PAID BY YOU FOR THE APPLICATION.
+          IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OF OR INABILITY TO USE THE APPLICATION, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. IN ANY CASE, LICENSOR{'\''}S ENTIRE LIABILITY UNDER ANY PROVISION OF THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT ACTUALLY PAID BY YOU FOR THE APPLICATION.
         </p>
 
         <h3>11. Export Restrictions</h3>

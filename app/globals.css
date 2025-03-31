@@ -1,5 +1,5 @@
 body {
-  font-family: 'Futura', sans-serif;
+  font-family: var(--font-roboto), sans-serif; 
   background-color: #f5f0e1; /* Cream background */
   color: #4a2c00; /* Dark brown text */
   margin: 0;
@@ -97,7 +97,7 @@ body {
 .navbar a {
   color: #fff;
   text-decoration: none;
-  font-family: 'Futura', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 500;
   font-size: 1.2rem;
   transition: color 0.3s ease;
@@ -184,7 +184,7 @@ body.menu-open {
 
 .form-group label {
   display: block;
-  font-family: 'Futura', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-size: 1.1rem;
   color: #4a2c00;
   margin-bottom: 0.5rem;
@@ -196,7 +196,7 @@ body.menu-open {
   padding: 0.75rem;
   border: 2px solid #8B6F47;
   border-radius: 8px;
-  font-family: 'Futura', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-size: 1rem;
   color: #4a2c00;
   background-color: #f5f0e1;
@@ -598,7 +598,7 @@ body.menu-open {
 .footer p {
   margin: 0.5rem 0;
   font-size: 1rem;
-  font-family: 'Futura', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
 }
 
 .footer-links {
@@ -608,7 +608,7 @@ body.menu-open {
 .footer-links a {
   color: #D97706; /* Muted orange */
   text-decoration: none;
-  font-family: 'Futura', sans-serif;
+  font-family: var(--font-roboto), sans-serif;
   font-weight: 500;
   margin: 0 0.5rem;
   transition: color 0.3s ease;
