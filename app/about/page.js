@@ -16,7 +16,7 @@ export default function About() {
       <section className="about-section fade-in">
         <h2>Our Mission 🏢</h2>
         <p>
-          Sundai is a pioneering business dedicated to delivering secure, AI-driven solutions for modern enterprises. Founded by Christian Okeke, an IT Director at Healing Hands Healthcare, Sundai leverages over 3 years of expertise in healthcare IT, cloud infrastructure, cybersecurity, and business process design. Our mission is to empower businesses with innovative tools that enhance operational efficiency, protect sensitive data, and provide seamless accessibility. We've transformed industries with projects like the Sundai app, Medical Cares, and Scroll, and we're committed to driving innovation for our clients.
+          Sundai is a pioneering business dedicated to delivering secure, AI-driven solutions for modern enterprises. Our mission is to empower businesses with innovative tools that enhance operational efficiency, protect sensitive data, and provide seamless accessibility. We've transformed industries with projects like the Sundai app, Medical Cares, and Scroll, and we're committed to driving innovation for the right reasons.
         </p>
       </section>
 
@@ -27,7 +27,7 @@ export default function About() {
       <section className="about-section fade-in">
         <h2>Meet Our Founder: Christian Okeke 👋</h2>
         <p>
-          Christian Okeke is the visionary behind Sundai, serving as its founder and an IT Director at Healing Hands Healthcare. With over 3 years of experience in healthcare IT, Christian specializes in cloud infrastructure, cybersecurity, and business process design. He holds certifications as a Microsoft 365 Certified Endpoint Administrator Associate, Microsoft 365 Certified Fundamentals, and CompTIA Security+ professional. Christian's passion for innovation has led to the creation of impactful projects like the Sundai app, Medical Cares, and Scroll, transforming industries from healthcare to spiritual wellness. His leadership and expertise ensure that Sundai delivers top-tier solutions to its clients.
+          Christian Okeke is the visionary behind Sundai, serving as its founder and an IT Director at Healing Hands Healthcare. With over 3 years of experience in healthcare IT, Christian specializes in cloud infrastructure, cybersecurity, and business process design.
         </p>
       </section>
 

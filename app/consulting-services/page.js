@@ -70,7 +70,7 @@ export default function ConsultingServices() {
       <section className="about-section fade-in">
         <h2>Why Choose Sundai Consulting? 💡</h2>
         <p>
-          At Sundai, we bring over 3 years of expertise in healthcare IT, cloud infrastructure, and cybersecurity to help your business thrive. Our founder, Christian Okeke, is a Microsoft 365 Certified Endpoint Administrator and CompTIA Security+ certified professional, ensuring you receive top-tier guidance. We've transformed industries with projects like the Sundai app, Medical Cares, and Scroll, and we're ready to bring that same innovation to your organization. Let's work together to enhance efficiency, secure your data, and drive growth.
+          At Sundai, we bring over 3 years of expertise in healthcare IT, cloud infrastructure, and cybersecurity to help your business thrive. We've transformed industries with projects like the Sundai app, Medical Cares, and Scroll. Looking forward, we're ready to bring that same innovation to your organization. Let's work together to enhance efficiency, secure your data, and drive growth!!
         </p>
       </section>
 

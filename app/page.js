@@ -10,7 +10,7 @@ export default function Home() {
       <section className="hero fade-in">
         <h1>Sundai: Innovate with Confidence 🌟</h1>
         <p>
-          A leading business in secure AI solutions, founded by Christian Okeke, an IT Director with a passion for innovation. 🚀
+          A company focused on bridging the gap between technology, processes, and people. 🚀
         </p>
         <Link href="/contact">
           <button className="cta-button">Get Started Today</button>
@@ -21,7 +21,7 @@ export default function Home() {
       <section className="about-section fade-in">
         <h2>Welcome to Sundai 🏢</h2>
         <p>
-          Sundai is a pioneering business dedicated to delivering secure, AI-driven solutions for modern enterprises. Founded by Christian Okeke, an IT Director at Healing Hands Healthcare, we specialize in healthcare IT, cloud infrastructure, cybersecurity, and business process design. Our mission is to empower businesses with innovative tools that enhance operational efficiency, protect sensitive data, and provide seamless accessibility.
+          Sundai is a pioneering business dedicated to delivering solutions for modern enterprises. Our mission is to empower businesses by providing innovative tools that enhance operational efficiency, and provide seamless accessibility.
         </p>
         <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
           <Link href="/about">
@@ -82,7 +82,7 @@ export default function Home() {
       <section className="about-section fade-in">
         <h2>Our Credentials 🏆</h2>
         <p>
-          Sundai's team is backed by industry-leading certifications, ensuring top-tier expertise in every project. Our founder, Christian Okeke, holds certifications like Microsoft 365 Certified Endpoint Administrator Associate and CompTIA Security+.
+          Sundai's team is backed by industry-leading certifications, ensuring top-tier expertise in every project.
         </p>
         <p style={{ textAlign: 'center', marginTop: '1.5rem' }}>
           <Link href="/licenses">
