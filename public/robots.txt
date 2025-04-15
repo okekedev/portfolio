@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow private policies
+Disallow: /gronk-privacy-policy
+Disallow: /radio-privacy-policy
+
+# Sitemap location
+Sitemap: https://your-domain.com/sitemap.xml
