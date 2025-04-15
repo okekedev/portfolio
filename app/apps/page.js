@@ -17,7 +17,7 @@ export default function Apps() {
       {/* Apps Section */}
       <section className="projects-section fade-in">
         <h2>Our Apps ✨</h2>
-        {/* Apps with App Store Links (Medical Cares and Scroll) */}
+        {/* Apps with App Store Links (Medical Cares, Scroll, and Sundai Radio) */}
         <div className="projects-grid projects-grid-links">
           <div className="project-card">
             <Image
@@ -66,6 +66,33 @@ export default function Apps() {
             <p>
               <a
                 href="https://apps.apple.com/us/app/scroll/id6497410297"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download on App Store
+              </a>
+            </p>
+          </div>
+          <div className="project-card">
+            <Image
+              src="/sundai-radio.png"
+              alt="Sundai Tuner"
+              width={150}
+              height={150}
+              quality={75}
+              loading="lazy"
+            />
+            <h3>Sunday Tuner</h3>
+            <p>
+              A retro-styled positive music streaming app featuring curated stations for relaxation and focus. 🎵
+            </p>
+            <p><strong>Tech Stack:</strong> SwiftUI, WebKit</p>
+            <p>
+              Impact: Delivers peaceful, uplifting music for meditation, study, and spiritual reflection.
+            </p>
+            <p>
+              <a
+                href="https://apps.apple.com/us/app/sundai-radio/id6744626165"
                 target="_blank"
                 rel="noopener noreferrer"
               >
