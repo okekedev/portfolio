@@ -17,7 +17,7 @@ export default function Apps() {
       {/* Apps Section */}
       <section className="projects-section fade-in">
         <h2>Our Apps ✨</h2>
-        {/* Apps with App Store Links (Medical Cares, Scroll, and Sundai Radio) */}
+        {/* Apps with App Store Links (Medical Cares, Scroll, Sundai Radio, Sundai Stocks, and Sundai EQ) */}
         <div className="projects-grid projects-grid-links">
           <div className="project-card">
             <Image
@@ -75,28 +75,82 @@ export default function Apps() {
           </div>
           <div className="project-card">
             <Image
-              src="/sundai-radio.png"
-              alt="Sundai Tuner"
+              src="/sundairadio.png"
+              alt="Sundai Radio Player"
               width={150}
               height={150}
               quality={75}
               loading="lazy"
             />
-            <h3>Sunday Tuner</h3>
+            <h3>Sundai Radio Player</h3>
             <p>
-              A retro-styled positive music streaming app featuring curated stations for relaxation and focus. 🎵
+              A beautiful, retro-styled web radio player with curated Christian music channels and 1940s-inspired design. 🎵
             </p>
-            <p><strong>Tech Stack:</strong> SwiftUI, WebKit</p>
+            <p><strong>Tech Stack:</strong> Python, Dash, Docker</p>
             <p>
-              Impact: Delivers peaceful, uplifting music for meditation, study, and spiritual reflection.
+              Impact: Provides high-quality Christian music streaming with categories including Piano, Lofi, Christian Rap, and more.
             </p>
             <p>
               <a
-                href="https://apps.apple.com/us/app/sundai-radio/id6744626165"
+                href="https://radio.sundai.us"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Download on App Store
+                Visit Sundai Radio Player
+              </a>
+            </p>
+          </div>
+          <div className="project-card">
+            <Image
+              src="/sundaistocks.png"
+              alt="Sundai Stocks"
+              width={300}
+              height={150}
+              quality={75}
+              loading="lazy"
+            />
+            <h3>Sundai Stocks</h3>
+            <p>
+              An advanced stock analysis and prediction platform combining technical analysis with AI-powered sentiment analysis. 📈
+            </p>
+            <p><strong>Tech Stack:</strong> Python, Dash, Docker, Google Gemini AI</p>
+            <p>
+              Impact: Provides comprehensive market insights with AI+ predictions, news sentiment analysis, and technical indicators.
+            </p>
+            <p>
+              <a
+                href="https://stocks.sundai.us"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit Sundai Stocks
+              </a>
+            </p>
+          </div>
+          <div className="project-card">
+            <Image
+              src="/sundaieq.png"
+              alt="Sundai EQ Chrome Extension"
+              width={300}
+              height={150}
+              quality={75}
+              loading="lazy"
+            />
+            <h3>Sundai EQ</h3>
+            <p>
+              The ultimate YouTube audio equalizer Chrome extension with professional 8-band EQ and live visualizer. 🎵
+            </p>
+            <p><strong>Tech Stack:</strong> JavaScript, Chrome Extension API, Web Audio API</p>
+            <p>
+              Impact: Transforms YouTube audio experience with real-time equalizer effects and audio visualization.
+            </p>
+            <p>
+              <a
+                href="https://chromewebstore.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Available on Chrome Web Store
               </a>
             </p>
           </div>
@@ -104,14 +158,6 @@ export default function Apps() {
         {/* Apps with Embedded Videos (Sundai and RoadVision) */}
         <div className="projects-grid projects-grid-videos">
           <div className="project-card">
-            <Image
-              src="/document-icon.jpg"
-              alt="Sundai App"
-              width={300}
-              height={150}
-              quality={75}
-              loading="lazy"
-            />
             <h3>Sundai App</h3>
             <p>
               Secure AI integration for document processing with enterprise-grade security. 🔒
@@ -132,14 +178,6 @@ export default function Apps() {
             </div>
           </div>
           <div className="project-card">
-            <Image
-              src="/mobile-devices-2.jpg"
-              alt="RoadVision Project"
-              width={300}
-              height={150}
-              quality={75}
-              loading="lazy"
-            />
             <h3>RoadVision</h3>
             <p>
               An innovative app for road safety and navigation, powered by AI. 🛣️
